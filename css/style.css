@@ -211,7 +211,7 @@ body {
   padding: 5rem;
   background-color: #353839;
   flex-direction: column;
-  position: absolute; }
+  position: relative; }
   @media (max-width: 29em) {
     .footer {
       padding: 2.5rem; } }
