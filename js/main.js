@@ -209,3 +209,13 @@ function expand() {
         nav.className = "navbar__nav";
     }
 }
+
+
+function hideFooter() {
+    $("#footer").hide();
+}
+
+
+function showFooter() {
+    $("#footer").show();
+}

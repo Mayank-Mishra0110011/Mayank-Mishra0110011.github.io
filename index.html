@@ -74,13 +74,13 @@
             <div id="toast"></div>       
             <form class="contact__form" onsubmit="sendEmail(event)">
                 <div>
-                    <input maxlength="50" type="text" name="Name" id="Name" placeholder="Your Name" autocomplete="off">
+                    <input maxlength="50" type="text" name="Name" id="Name" placeholder="Your Name" autocomplete="off" onfocus="hideFooter()" onfocusout="showFooter()">
                 </div>
                 <div>
-                    <input maxlength="50" type="text" name="Email" id="Email" placeholder="Your Email" autocomplete="off">
+                    <input maxlength="50" type="text" name="Email" id="Email" placeholder="Your Email" autocomplete="off" onfocus="hideFooter()" onfocusout="showFooter()">
                 </div>
                 <div>
-                    <textarea maxlength="250" rows="3" name="Message" id="Message" placeholder="Your Message"></textarea>
+                    <textarea maxlength="250" rows="3" name="Message" id="Message" placeholder="Your Message" onfocus="hideFooter()" onfocusout="showFooter()"></textarea>
                 </div>
                 <div>
                     <button type="submit" class="btn btn--blue">Send</button>
