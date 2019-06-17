@@ -1,27 +1,17 @@
 
-.wrapper {
-    min-height:100%;
-    margin-bottom: -4rem;
-    padding-bottom: 4rem;
-    position: relative;
-    @include respond(phone) {
-        padding-bottom: 2.5rem;
-        margin-bottom: -2.5rem;
-    }    
-}
-
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 0;
-    width: 100%;
-    bottom: 0;
     background-color: $color-onyx;
+    padding: 5rem;
     flex-direction: column;
-    position: absolute;
+    position: relative;
+    @include respond(phone) {
+        padding-bottom: 2.5rem;
+    }    
     &__scroll-top {
-        // position: absolute;
+        position: absolute;
         top: 0%;
     }
     &__scroll-top :hover {
