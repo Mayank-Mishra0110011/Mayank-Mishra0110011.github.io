@@ -2,7 +2,7 @@
 .navbar {
     background-color: $color-jet;
     font-size: 2em;
-    z-index: 10;
+    z-index: 1000;
     &__nav {
         display: flex;
         list-style-type: none;

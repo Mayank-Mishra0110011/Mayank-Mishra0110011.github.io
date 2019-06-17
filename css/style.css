@@ -205,6 +205,7 @@ body {
       font-size: 13pt; } }
 
 .footer {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +240,7 @@ body {
 .navbar {
   background-color: #343434;
   font-size: 2em;
-  z-index: 10; }
+  z-index: 1000; }
   .navbar__nav {
     display: flex;
     list-style-type: none;
@@ -407,7 +408,7 @@ body {
     @media (max-width: 29em) {
       .contact__header {
         padding: 0 1rem;
-        font-size: 0.2em;
+        font-size: 0.5em;
         display: inline;
         text-align: center; } }
   .contact__form {
