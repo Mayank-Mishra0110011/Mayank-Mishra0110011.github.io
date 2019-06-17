@@ -1,6 +1,5 @@
 
 .footer {
-    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +9,7 @@
     }    
     background-color: $color-onyx;
     flex-direction: column;
-    position: relative;
+    position: absolute;
     &__scroll-top {
         position: absolute;
         top: 0%;

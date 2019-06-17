@@ -205,14 +205,13 @@ body {
       font-size: 13pt; } }
 
 .footer {
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5rem;
   background-color: #353839;
   flex-direction: column;
-  position: relative; }
+  position: absolute; }
   @media (max-width: 29em) {
     .footer {
       padding: 2.5rem; } }
