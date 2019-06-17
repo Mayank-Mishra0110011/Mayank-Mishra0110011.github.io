@@ -109,7 +109,7 @@ window.onload = function() {
     });
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-    $("#Name").focus(e => {
+    /*$("#Name").focus(e => {
         if (window.innerWidth <= 464) {
             $("#footer").hide();
         }
@@ -132,7 +132,7 @@ window.onload = function() {
     });
     $("#Message").focusout(e => {
         $("#footer").show();
-    });
+    });*/
 }
 
 

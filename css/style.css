@@ -205,6 +205,7 @@ body {
       font-size: 13pt; } }
 
 .footer {
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
