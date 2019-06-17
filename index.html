@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hi! Welcome To My Website</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/p5.js"></script>
+    <script src="./js/sketch.js"></script>
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <ul class="navbar__nav" id="nav">
+            <li class="dropDown"><a href="javascript:void(0);" onclick="expand()">&#8213;<br>&#8213;<br>&#8213;</a></li>
+            <li><a href="#">Home</a></li>    
+            <li><a href="#about">About</a></li>    
+            <li><a href="#portfolio">Portfolio</a></li>    
+            <li><a href="#contact">Contact</a></li>    
+        </ul>
+    </div>
+    <header id="header" class="header">
+        <div class="welcomeMessage">
+            <div class="text-light">
+                Hi, I'm<span class="text-info"> Mayank Mishra.</span><br>I am an <span class="text-danger">Aspiring Web Developer.</span><br>
+            </div>
+            <div style="margin-top: 5rem;">
+                <a href="#portfolio" class="btn btn--white">View Portfolio</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="about grid-container">
+            <div class="about__intro">
+                <div class="about__intro--heading">
+                    Who am I?
+                </div>
+                <div class="about__intro--paragraph">
+                    <p>
+                        I'm a 2nd year student at <a href="http://vips.edu/" style="text-decoration: none;">Vivekananda Institute Of Professional Studies</a>.<br> 
+                        Pursuing Bachelor of Computer Applications.<br>
+                        I love to code. Things that I like to code include but are not limited to<br>
+                        Websites, Games, Utility Scripts, Creative/Visualized Programs.<br>
+                        If you'd like to hire me or work on a project with me or just want to talk,<br>
+                        You can send a quick <a href="#contact" style="text-decoration: none;">message</a> to me or send a lengthy email at <a href="mailto:MayankMishra0110011@gmail.com" style="text-decoration: none;">MayankMishra0110011@gmail.com</a>.
+                    </p>
+                </div>  
+            </div>
+            <div class="about__chart" id="chart"></div>
+        </section>
+        <section id="portfolio" class="portfolio">
+            <img src="./img/cv.svg" width="70px" onclick="downloadCV()">
+            <button id="left" class="btn-text" onclick="leftClick()">&#10094;</button>
+            <div class="portfolio__projects">
+                <video autoplay muted loop id="vid">
+                    <source src="./img/Anime.webm" type="video/mp4">
+                </video>
+            </div>
+            <button id="right" class="btn-text" onclick="rightClick()">&#10095;</button>
+            <a id="project-title" class="text-danger" href="https://github.com/Mayank-Mishra0110011/Anime-Info">Anime Info</a>
+        </section>
+        <section id="contact" class="contact">
+            <div class="contact__header">
+                <h1>
+                    If you'd like to get in touch, have some questions answered, collaborate on a project, hire me or just  want to say hi,
+                    fill up your name, email and message in the form below. I'll try to get in touch ASAP.
+                </h1>
+            </div>
+            <div id="toast"></div>       
+            <form class="contact__form" onsubmit="sendEmail(event)">
+                <div>
+                    <input maxlength="50" type="text" name="Name" id="Name" placeholder="Your Name" autocomplete="off">
+                </div>
+                <div>
+                    <input maxlength="50" type="text" name="Email" id="Email" placeholder="Your Email" autocomplete="off">
+                </div>
+                <div>
+                    <textarea maxlength="250" rows="3" name="Message" id="Message" placeholder="Your Message"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn--blue">Send</button>
+                </div>
+            </form>   
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__scroll-top">
+                <img src="./img/scrolltop.svg" width="100px" onclick="window.scrollTo(0, 0)">
+            </div>
+            <div class="footer__social">
+                <img src="./img/github.svg" width="100px" onclick="document.location='https://github.com/Mayank-Mishra0110011'">
+                <img src="./img/cv.svg" width="100px" onclick="downloadCV()">
+            </div>
+            <p>Mayank Mishra &copy; 2019</p>
+        </div>
+    </footer>
+</body>
+</html>

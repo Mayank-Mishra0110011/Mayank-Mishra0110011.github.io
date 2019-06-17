@@ -1,0 +1,181 @@
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.about {
+    height: 120vh;
+    &__intro {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        &--heading {
+            display: flex;
+            font-size: 3em;
+            @include respond(phone) {
+                padding: 7%;
+                letter-spacing: 0.3rem;
+            }
+            color: $color-jet;
+            padding: 5%;
+            letter-spacing: 0.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+        &--paragraph {
+            display: flex;
+            padding: 2rem;
+            font-size: 1.5em;
+            @include respond(phone) {
+                font-size: 1.2em;
+                padding: 8rem;
+                letter-spacing: 0;
+            }
+            color: $color-black;
+            letter-spacing: 0.2rem;
+            align-items: center;
+            justify-content: center;
+            a {
+                color: $color-tango-pink;
+            }
+        }
+    }
+    &__chart {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../img/bg1.jpg); 
+    position: relative;
+    &__projects {
+        border-radius: 1rem;
+        width: 100rem;
+        height: 50rem;
+        overflow: hidden;
+        video {
+            min-width: 100%; 
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+        }
+    }
+    #project-title {
+        position: absolute;
+        bottom: 2%;
+        font-size: 4em;
+        text-decoration: none;
+        @include respond(phone) {
+            bottom: 27%;
+            font-size: 1.2em;
+        }
+    }
+    img {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        cursor: pointer;
+        @include respond(phone) {
+            top: 20%;
+            left: 40%;
+            width: 5rem;
+        }
+    }
+}
+
+.contact {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../img/bg3.jpg); 
+    overflow: hidden;
+    position: relative;
+    &__header {
+        color: $color-white;
+        padding: 7rem 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;    
+        letter-spacing: 0.2rem;
+        @include respond(phone) {
+            padding: 0 1rem;
+            font-size: 0.2em;
+            display: inline;
+            text-align: center;
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        input {
+            width: 70rem;
+            padding: 0 1rem;
+            height: 4rem;
+            border-radius: 0.3rem;
+            border: none;
+            @include respond(phone) {
+                width: 25rem;
+                height: 3rem;
+            }
+        }
+        #Name {
+            @include respond(phone) {
+                margin-top: 8rem;
+            }
+        }        
+        textarea {
+            padding: 1rem 1rem;
+            width: 70rem;
+            height: 10rem;
+            border: none;
+            border-radius: 0.3rem;
+            @include respond(phone) {
+                width: 25rem;
+                height: 10rem;
+            }
+        }
+        * {
+            margin: 1rem;
+        }
+    }
+    #toast {
+        visibility: hidden;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-white;
+        color: $color-black;
+        border-radius: 0.2rem;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 27%;
+        @include respond(phone) {
+            top: 15%;
+            left: 40%;
+        }
+    }
+    #toast.make {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        @include respond(phone) {
+            animation: none;
+        }
+    }
+}
