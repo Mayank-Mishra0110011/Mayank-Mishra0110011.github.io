@@ -109,33 +109,16 @@ window.onload = function() {
     });
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-    $("#Name").focus(e => {
-        if (window.innerWidth <= 464) {
-            $("#footer").hide();
-        }
-    });
-    $("#Email").focus(e => {
-        if (window.innerWidth <= 464) {
-            $("#footer").hide();    
-        }
-    });
-    $("#Message").focus(e => {
-        if (window.innerWidth <= 464) {
-            $("#footer").hide();
-        }
-    });
-    $("#Name").focusout(e => {
-        $("#footer").show();
-        document.href = '#contact';
-    });
-    $("#Email").focusout(e => {
-        $("#footer").show();    
-        document.href = '#contact';
-    });
-    $("#Message").focusout(e => {
-        $("#footer").show();
-        document.href = '#contact';
-    });
+}
+
+function showFooter() {
+    $("#footer").show();
+}
+
+function hideFooter() {
+    if (window.innerWidth <= 464) {
+        $("#footer").hide();
+    }
 }
 
 
