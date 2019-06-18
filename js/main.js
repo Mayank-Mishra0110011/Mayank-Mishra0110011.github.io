@@ -126,12 +126,15 @@ window.onload = function() {
     });
     $("#Name").focusout(e => {
         $("#footer").show();
+        document.href = '#contact';
     });
     $("#Email").focusout(e => {
         $("#footer").show();    
+        document.href = '#contact';
     });
     $("#Message").focusout(e => {
         $("#footer").show();
+        document.href = '#contact';
     });
 }
 
