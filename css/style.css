@@ -386,7 +386,8 @@ body {
       .portfolio img {
         top: 20%;
         left: 40%;
-        width: 5rem; } }
+        width: 5rem;
+        z-index: 100; } }
 
 .contact {
   height: 100vh;
